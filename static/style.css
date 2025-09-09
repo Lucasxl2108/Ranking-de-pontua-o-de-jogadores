@@ -1,0 +1,190 @@
+/* static/style.css */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #0d1a3c; /* Azul escuro do fundo */
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #1e3a5f; /* Azul mais claro para o cabeçalho */
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.header p {
+    color: #a0a0a0;
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+.container {
+    max-width: 900px;
+    width: 95%;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #1e3a5f; /* Cor azul dos cartões */
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.upload-card h2, .ranking-card h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.upload-card form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input[type="file"] {
+    background-color: #2a4970;
+    color: #ffffff;
+    border: 1px solid #4a6c90;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #0056b3;
+}
+
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.controls label {
+    color: #a0a0a0;
+    font-size: 1.1em;
+}
+
+#lista-select {
+    background-color: #2a4970;
+    color: #ffffff;
+    border: 1px solid #4a6c90;
+    padding: 8px 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#ranking-table {
+    width: 100%;
+    border-collapse: separate; /* Permite border-radius nas células */
+    border-spacing: 0;
+    margin-top: 20px;
+    background-color: #0d1a3c; /* Fundo mais escuro para a tabela */
+    border-radius: 8px;
+    overflow: hidden; /* Garante que os cantos arredondados funcionem */
+}
+
+#ranking-table th, #ranking-table td {
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: 1px solid #2a4970; /* Linhas de separação */
+    color: #ffffff;
+    font-size: 0.95em;
+}
+
+#ranking-table th {
+    background-color: #1e3a5f; /* Cabeçalho da tabela */
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #a0a0a0;
+    padding: 18px 10px;
+    letter-spacing: 0.5px;
+}
+
+#ranking-table th:first-child { border-top-left-radius: 8px; }
+#ranking-table th:last-child { border-top-right-radius: 8px; }
+#ranking-table tr:last-child td:first-child { border-bottom-left-radius: 8px; }
+#ranking-table tr:last-child td:last-child { border-bottom-right-radius: 8px; }
+
+
+#ranking-table tbody tr:hover {
+    background-color: #2a4970; /* Efeito hover */
+}
+
+#ranking-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Cores para os top 3 */
+.top-1 { background-color: #8c7b0d !important; } /* Ouro escuro */
+.top-2 { background-color: #6a6a6a !important; } /* Prata escuro */
+.top-3 { background-color: #7b4a2e !important; } /* Bronze escuro */
+
+.rank-col { width: 10%; }
+.name-col { text-align: left; width: 40%; }
+.level-col { width: 15%; }
+.score-col { width: 20%; }
+.previous-col { width: 15%; } /* Coluna para os ícones */
+
+.previous-icon {
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+.fa-arrow-up { color: #28a745; } /* Verde para subida */
+.fa-arrow-down { color: #dc3545; } /* Vermelho para descida */
+.fa-minus { color: #a0a0a0; } /* Cinza para sem mudança */

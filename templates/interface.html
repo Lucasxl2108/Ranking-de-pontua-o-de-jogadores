@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking FIFA - Times Asiáticos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1>TOP JOGADORES NO RANKING</h1>
+        <p>(Dados do Ranking)</p>
+    </div>
+
+    <div class="container">
+        <div class="card upload-card">
+            <h2>Carregar Novo Ranking</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept=".csv" required>
+                <button type="submit">Enviar CSV</button>
+            </form>
+        </div>
+
+        <div class="card ranking-card">
+            <div class="controls">
+                <label for="lista-select">Selecione uma Lista:</label>
+                <select id="lista-select">
+                    <option>Nenhuma lista carregada</option>
+                </select>
+            </div>
+            
+            <table id="ranking-table">
+                <thead>
+                    <tr>
+                        <th class="rank-col">RANK</th>
+                        <th class="name-col">NOME</th>
+                        <th class="level-col">NÍVEL</th>
+                        <th class="score-col">PONTUAÇÃO</th>
+                        <th class="previous-col"></th> </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
